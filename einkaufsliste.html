@@ -1,0 +1,203 @@
+<html>
+<head>
+<!-- Stylings am besten Ignorieren :) -->
+	<style>
+		body{
+			color: #113f67;
+			font-family: Verdana, sans-serif;
+			background-color: #113f67;
+			margin: 0 5px;
+			
+		}
+		#container{
+			padding: 10px;
+			width: 95vw;
+			max-width: 1024px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #e7eaf6;
+			height: 95vh;
+			box-sizing: border-box;
+			overflow: visible;
+		}
+		.header h1{
+			text-align: center;
+			margin: 0;
+		}
+		.header p{margin: 1px}
+		.header{
+			border-bottom: 1px solid lightgrey;
+			padding-bottom: 5px;
+		}
+		#form-wrapper form{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-bottom: 1px solid lightgrey;
+			padding: 15px 5px;
+			margin: 0;
+		}
+		#form-wrapper input[type=text]{
+			height: 28px;
+			text-align: center; 
+			border-radius: 5px;
+			border: 1px solid #113f67;
+		}
+		#form-wrapper input[type=submit]{
+			font-weight: 800;
+			background-color: transparent;
+			border: none;
+			color: #113f67;
+			cursor: pointer;
+			font-size: 28px;
+		}
+		#form-wrapper input[type=submit]:hover{
+			color: #113f6773 !important;
+			cursor: pointer;
+		}
+		ul{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		ul li{
+			min-height: 80px;
+			width: 140px;
+			margin: 10px;
+		}
+		#card{
+			background: #113f67;
+			border-radius: 5px; 
+			color: white;
+			padding: 10px 10px 20px 10px;
+			justify-content: space-between;
+			display: flex; 
+			flex-direction: column;
+		}
+		#card h4.p-name{
+			text-align: center;
+		}
+		#card span.p-icon{
+			display: block;
+			width: 100%;
+			min-height: 50px;
+			text-align: center;
+		}
+		#card:hover{
+			background: #113f67d9;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<!-- alles im "header" könnt ihr erstmal Ignorieren -->
+	<div class="header"> 
+		<h1>Einkaufsliste</h1>
+		<!-- wenn wir uns Anmelden könnte hier der Username stehen -->
+		<!-- Einloggen kommt aber erst zum schluss, dann einfach das Style entfernen -->
+		<p style="display: none;">Eingeloggt als: &lt;Username&gt;</p> 
+	</div>
+	
+	<div class="content">
+	
+		<!-- Liste von Produkten, aus der Datenbank evtl.? -->
+		<datalist id="browser">
+		  <option value="Internet Explorer">
+		  <option value="Firefox">
+		  <option value="Chrome">
+		  <option value="Opera">
+		  <option value="Safari">
+		</datalist>  
+		<div id="form-wrapper"> 
+			<!-- Was soll ausgeführt werden wenn wir das Plus klicken?  -->
+			<form action="#" method="post">
+				<input name="product" list="browser" type="text" placeholder="Produkt eingeben" value=""/>
+				<input type="submit" value="+" />
+			</form>
+		</div>	
+		<div id="list">
+			<!-- Die li Elemente scheinen alle gleich Aufgebaut zu sein -->
+			<ul>
+				<!-- was passiert wenn ich so eine Kachel klicke -->
+				<li>
+					<a href="#">
+						<div id="card">
+								<h4 class="p-name">Produkt</h4>
+								<span class="p-icon"><img src="https://placehold.co/46x46"/></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div id="card">
+								<h4 class="p-name">Produkt</h4>
+								<span class="p-icon"><img src="https://placehold.co/46x46"/></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div id="card">
+								<h4 class="p-name">Produkt</h4>
+								<span class="p-icon"><img src="https://placehold.co/46x46"/></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div id="card">
+								<h4 class="p-name">Produkt</h4>
+								<span class="p-icon"><img src="https://placehold.co/46x46"/></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div id="card">
+								<h4 class="p-name">Produkt</h4>
+								<span class="p-icon"><img src="https://placehold.co/46x46"/></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div id="card">
+								<h4 class="p-name">Produkt</h4>
+								<span class="p-icon"><img src="https://placehold.co/46x46"/></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div id="card">
+								<h4 class="p-name">Produkt</h4>
+								<span class="p-icon"><img src="https://placehold.co/46x46"/></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div id="card">
+								<h4 class="p-name">Produkt</h4>
+								<span class="p-icon"><img src="https://placehold.co/46x46"/></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div id="card">
+								<h4 class="p-name">Produkt</h4>
+								<span class="p-icon"><img src="https://placehold.co/46x46"/></span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
